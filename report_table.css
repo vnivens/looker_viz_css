@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2')
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Meta';
+  src: url("https://cdn.lever.co/fonts/Meta/metanormal-webfont-2017.woff") format("woff");
+}
+
 #tooltip {
     position: absolute;
     width: auto;
@@ -14,111 +28,118 @@
     font-family: sans-serif;
     font-size: 12px;
     z-index: 2;
-
-    /* Add customization here  */
-
 }
 
-#tooltip.hidden {
+.tooltipTable {
+  font-family: 'Meta';
+  border: 0px;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.focus {
+  font-weight: bold;
+}
+
+.hidden {
     display: none;
-
-  /* Add customization here  */
-
 }
 
-#tooltip p {
-    margin: 0;
-    font-family: sans-serif;
-    font-size: 12px;
-    line-height: 15px;
-
-    /* Add customization here  */
-
-
-}
-
-@font-face {
-  font-family: "Meta";
-  src: url("https://cdn.lever.co/fonts/Meta/metanormal-webfont-2017.woff") format("woff");
+.hover {
+  background-color: #ffffbb;
 }
 
 .reportTable {
-  font-family: "Meta";
-  font-size: 12px;
-  border: 1px solid #CCCCCC; 
-  border-collapse: collapse;
+  font-family: 'Meta';
+  border-collapse: separate;
   border-spacing: 3px;
-
-  /* Add customization here  */
-
+  table-layout: fixed;
 }
 
-.reportTable th {
-  color: #000000;
-  border: 1px solid #CCCCCC; 
-  border-bottom: 1px solid #CCCCCC !important;
-  /* font-size: 10px;  */
-  /* height: 25px; */
+th.headerCell {
+  border-bottom: 1px solid #000000 !important;
+  font-weight: bold;
   padding: 5px;
-
-  /* Add customization here  */
-
 }
 
-.reportTable td {
-  color: #000000;
+.headerCell.merged {
+  text-align: center !important;
+  background-color: #ffffff !important;
+}
+
+.headerCell.transposed.dimension.merged {
+  text-align: center !important;
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed {
+  font-weight: bold;
+}
+
+.indexCell.transposed.merged {
+  background-color: #ffffff !important;
+}
+
+.rowCell {
   vertical-align: super;
-  padding: 5px;
-  /*background: #FFFFFF;*/
-  border: 1px solid #CCCCCC; 
-  border-collapse: collapse;
-
-  /* Add customization here  */
-
+  padding-left: 5px;
 }
 
-.left {
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.rowCell.transposed.dimension.merged {
+  background-color: #ffffff !important;
+}
+
+.nonNumeric {
   text-align: left;
-
-  /* Add customization here  */
-
 }
 
-.right {
-  text-align: right !important;
-
-  /* Add customization here  */
-
+.numeric {
+  text-align: right;
 }
 
-.indent {
+.negative {
+  color: red;
+}
+
+.estimate {
+  color: darkgray !important;
+}
+
+.singleIndex {
   padding-left: 15px !important;
-
-  /* Add customization here  */
-
 }
 
 .subtotal {
   font-style: italic;
-  font-weight: bold;
-  background: #D3D3D3;
-
-  /* Add customization here  */
-
+  font-weight: bold !important;
 }
 
 .total {
-  border-top: 2px solid #000000 !important;
+  border-top: 2px solid #000000;
   font-weight: bold !important;
-
-  /* Add customization here  */
-
 }
 
 .total.transposed {
   border-top: 0px !important;
-  background: #D3D3D3;
+}
 
-  /* Add customization here  */
+.dimension.transposed {
+  font-weight: bold;
+}
 
+.rectElem.animated {
+  font-family: 'Meta';
+  padding: 4px;
+}
+
+.headerCell.animated {
+  border-bottom: 4px solid #ffffff;
+  box-shadow: inset 0px -1px 0px 0px #000000 !important;
+  font-weight: bold;
+  padding: 5px;
+  box-sizing: border-box;
 }
