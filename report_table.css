@@ -37,9 +37,13 @@
 
 }
 
+@font-face {
+  font-family: "Meta";
+  src: url("https://cdn.lever.co/fonts/Meta/metanormal-webfont-2017.woff") format("woff");
+}
+
 .reportTable {
   font-family: "Meta";
-  src: url(https://cdn.lever.co/fonts/Meta/metanormal-webfont-2017.woff);
   font-size: 12px;
   border: 1px solid #CCCCCC; 
   border-collapse: collapse;
